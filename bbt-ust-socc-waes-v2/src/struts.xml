@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="radioButtonAction" class="ustsocc.action.RadioButtonAction"
+			method="display">
+			<result name="none">/sampleEventEvaluation.jsp</result>
+		</action>
+		
+		<action name="addOrg" class="ustsocc.action.AddOrganizationAction">
+			<result name="success">/index.jsp</result>
+			<result name="error">/errorPage.jsp</result>
+			<result name="input">/sampleAddOrg.jsp</result>
+		</action>
+
+		<action name="addEvent" class="ustsocc.action.AddEventAction">
+			<result name="success">/index.jsp</result>
+			<result name="error">/errorPage.jsp</result>
+			<result name="input">/sampleAddEvent.jsp</result>
+		</action>
+
+		<action name="addEvaluation" class="ustsocc.action.AddEvaluationAction">
+			<result name="success">/index.jsp</result>
+			<result name="error">/errorPage.jsp</result>
+			<result name="input">/sampleAddEvaluation.jsp</result>
+		</action>
+
+		<action name="addEvaluationAccls" class="ustsocc.action.EvaluationAcclsAction">
+			<result name="success">/index.jsp</result>
+			<result name="error">/errorPage.jsp</result>
+			<result name="input">/sampleEventEvaluation.jsp</result>
+		</action>
+	</package>
+</struts>
