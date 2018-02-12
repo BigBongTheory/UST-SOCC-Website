@@ -2,8 +2,11 @@ package ustsocc.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -13,8 +16,12 @@ public class EvaluationAccls {
 	@GeneratedValue
 	private int id;
 	
-	@Column (name="eventCode", length=100, nullable=true)
-	private String eventCode;
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(
+        name = "eventCode", 
+        referencedColumnName = "eventCode"
+    )
+	private Event eventCode;
 	
 	@Column (name="firstName", length=100, nullable=false)
 	private String firstName;
@@ -87,11 +94,11 @@ public class EvaluationAccls {
 		this.id = id;
 	}
 
-	public String getEventCode() {
+	public Event getEventCode() {
 		return eventCode;
 	}
 
-	public void setEventCode(String eventCode) {
+	public void setEventCode(Event eventCode) {
 		this.eventCode = eventCode;
 	}
 

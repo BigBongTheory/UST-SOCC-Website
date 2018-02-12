@@ -12,7 +12,16 @@
 <body>
 	<h1>INDEX</h1>
 	<s:form action="radioButtonAction" method="post">
-		<s:submit/>
+		<s:submit value="Evaluate Event"/>
+	</s:form>
+	<s:form action="displayEvaluationRecords" method="post">
+		<s:submit value="Display Evaluation Records"/>	
+	</s:form>
+	<s:form action="displayOrganizationRecords" method="post">
+		<s:submit value="Display Organization Records"/>	
+	</s:form>
+	<s:form action="displayEventRecords" method="post">
+		<s:submit value="Display Event Records"/>	
 	</s:form>
 </body>
 </html>

@@ -10,6 +10,11 @@
 			<result name="none">/sampleEventEvaluation.jsp</result>
 		</action>
 		
+		<action name="returnHome" class="ustsocc.action.ReturnHomeAction" 
+			method="display">
+			<result name="none">/index.jsp</result>
+		</action>
+		
 		<action name="addOrg" class="ustsocc.action.AddOrganizationAction">
 			<result name="success">/index.jsp</result>
 			<result name="error">/errorPage.jsp</result>
@@ -33,5 +38,16 @@
 			<result name="error">/errorPage.jsp</result>
 			<result name="input">/sampleEventEvaluation.jsp</result>
 		</action>
+		
+		<action name="displayEvaluationRecords" class="ustsocc.action.DisplayEvaluationRecordsAction"
+			method="display">
+			<result name="none">/sampleDisplayEvaluationRecords.jsp</result>
+		</action>
+		
+		<action name="displayOrganizationRecords" class="ustsocc.action.DisplayOrganizationRecordsAction"
+			method="display">
+			<result name="none">sampleDisplayOrganizationRecords.jsp</result>
+		</action>
+		
 	</package>
 </struts>

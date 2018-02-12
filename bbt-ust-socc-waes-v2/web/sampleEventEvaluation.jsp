@@ -12,8 +12,8 @@
 </head> 
 <body>
 	<h2>Advocacy,Conference,Convention,Lecture, and Seminar EVALUATION</h2>
-	<h1>IM GheyYasdasd</h1>
-	<s:form action="addEvaluationAccls" method="post" namespace="/">
+	<s:form action="addEvaluationAccls.action" method="post" namespace="/">
+		<s:textfield label="Enter event code" key="eventCode"/>
 		<s:textfield label="Enter first name" key="firstName"/>
 		<s:textfield label="Enter last name" key="lastName"/>
 		

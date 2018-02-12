@@ -2,6 +2,8 @@
     <wb-module deploy-name="bbt-ust-socc-waes-v1">
         <wb-resource deploy-path="/" source-path="/web" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/bbt-ust-socc-waes-v1"/>
+        <wb-resource deploy-path="/" source-path="/build"/>
         <property name="context-root" value="bbt-ust-socc-waes-v1"/>
         <property name="java-output-path" value="/bbt-ust-socc-waes-v1/build/classes"/>
     </wb-module>

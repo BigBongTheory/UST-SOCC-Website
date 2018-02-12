@@ -1,12 +1,18 @@
 package ustsocc.model;
 
 import java.util.Date;
+
+import javax.persistence.CascadeType;
 //import java.text.SimpleDateFormat;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.NaturalId;
 
 @Entity
 @Table(name="event")
@@ -15,7 +21,8 @@ public class Event {
 	@GeneratedValue
 	private int id;
 	
-	@Column (name="eventCode", length=100, nullable=false)
+	@NaturalId
+	//@Column (name="eventCode", length=100, nullable=false)
 	private String eventCode;
 	
 	@Column (name="eventName", length=200, nullable=false)
