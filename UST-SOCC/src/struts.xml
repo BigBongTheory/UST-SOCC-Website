@@ -79,7 +79,7 @@
 		
 		<action name="returnHome" class="ustsocc.action.ReturnHomeAction" 
 			method="display">
-			<result name="none">/index.jsp</result>
+			<result name="none">/index2.jsp</result>
 		</action>
 	</package>
 </struts>
