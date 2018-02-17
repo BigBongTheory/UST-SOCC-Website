@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -12,21 +13,29 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import ustsocc.model.Organization;
 
-public class DisplayOrganizationRecordsAction extends ActionSupport {
+public class DeleteOrganizationAction extends ActionSupport {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+	private int id;
 	private List<Organization> organizations = new ArrayList<Organization>();
 	
 	public String execute() {
-		Configuration cfg = new Configuration();
-		cfg.configure("hibernate.cfg.xml");
-		SessionFactory factory = cfg.buildSessionFactory();
-		Session sesion = factory.openSession();
 
-		List li = sesion.createQuery("from Organization d").list();
+		////////////////////////////
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+
+		Session session = factory.openSession();
+		session.beginTransaction();
+
+		////////////////////////////
+		Query query = session.createQuery("delete Organization where id = :ID");
+		query.setParameter("ID", id);
+
+		int result = query.executeUpdate();
+		
+		List li = session.createQuery("from Organization d").list();
 		Iterator it = li.iterator();
 		
 		while (it.hasNext()) {
@@ -34,16 +43,24 @@ public class DisplayOrganizationRecordsAction extends ActionSupport {
 			Organization d = (Organization) o;
 			organizations.add(d);
 		}
-		sesion.close();
+		
+		session.getTransaction().commit();
+		session.close();
 		factory.close();
 		
+		System.out.println("Organization record where id = " + id + " was deleted");
+
 		return SUCCESS;
 	}
-
-	public String display() {
-		return NONE;
+	
+	public int getId() {
+		return id;
 	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public List<Organization> getOrganizations() {
 		return organizations;
 	}
@@ -51,7 +68,5 @@ public class DisplayOrganizationRecordsAction extends ActionSupport {
 	public void setOrganizations(List<Organization> organizations) {
 		this.organizations = organizations;
 	}
-	
-	
 
 }

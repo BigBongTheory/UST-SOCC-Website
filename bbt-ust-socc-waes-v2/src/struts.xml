@@ -5,14 +5,10 @@
 
 <struts>
 	<package name="default" extends="struts-default">
-		<action name="radioButtonAction" class="ustsocc.action.RadioButtonAction"
-			method="display">
-			<result name="none">/sampleEventEvaluation.jsp</result>
-		</action>
-		
-		<action name="returnHome" class="ustsocc.action.ReturnHomeAction" 
-			method="display">
-			<result name="none">/index.jsp</result>
+	
+		<!-- ACTIONS FOR ADDING ORGANIZATIONS -->
+		<action name="goToAddOrganization" class="ustsocc.action.GoToAddOrganizationAction">
+			<result name="success">/sampleAddOrg.jsp</result>
 		</action>
 		
 		<action name="addOrg" class="ustsocc.action.AddOrganizationAction">
@@ -21,12 +17,18 @@
 			<result name="input">/sampleAddOrg.jsp</result>
 		</action>
 
+		<!-- ACTIONS FOR ADDING EVENTS -->
+		<action name="goToAddEvent" class="ustsocc.action.GoToAddEventAction">
+			<result name="success">/sampleAddEvent.jsp</result>
+		</action>
+		
 		<action name="addEvent" class="ustsocc.action.AddEventAction">
 			<result name="success">/index.jsp</result>
 			<result name="error">/errorPage.jsp</result>
 			<result name="input">/sampleAddEvent.jsp</result>
 		</action>
 
+		<!-- ACTIONS FOR SUBMITTING AN EVALUATION -->
 		<action name="addEvaluation" class="ustsocc.action.AddEvaluationAction">
 			<result name="success">/index.jsp</result>
 			<result name="error">/errorPage.jsp</result>
@@ -39,15 +41,45 @@
 			<result name="input">/sampleEventEvaluation.jsp</result>
 		</action>
 		
+		<!-- ADMIN ACTIONS FOR DISPLAYING RECORDS -->
 		<action name="displayEvaluationRecords" class="ustsocc.action.DisplayEvaluationRecordsAction"
 			method="display">
 			<result name="none">/sampleDisplayEvaluationRecords.jsp</result>
 		</action>
 		
-		<action name="displayOrganizationRecords" class="ustsocc.action.DisplayOrganizationRecordsAction"
-			method="display">
-			<result name="none">sampleDisplayOrganizationRecords.jsp</result>
+		<action name="displayOrganizationRecords" class="ustsocc.action.DisplayOrganizationRecordsAction">
+			<result name="success">sampleDisplayOrganizationRecords.jsp</result>
 		</action>
 		
+		<action name="displayEventRecords" class="ustsocc.action.DisplayEventRecordsAction">
+			<result name="success">sampleDisplayEventRecords.jsp</result>
+		</action>
+		
+		<!-- USER ACTIONS FOR DISPLAYING RECORDS -->
+		<action name="displayOrganizationRecordsUser" class="ustsocc.action.DisplayOrganizationRecordsUserAction"
+			method="display">
+			<result name="none">sampleDisplayOrganizationRecordsUser.jsp</result>
+		</action>
+		
+		<action name="displayEventRecordsUser" class="ustsocc.action.DisplayEventRecordsUserAction"
+			method="display">
+			<result name="none">sampleDisplayEventRecordsUser.jsp</result>
+		</action>
+		
+		<!-- ACTIONS FOR DELETING -->
+		<action name="deleteEvent" class="ustsocc.action.DeleteEventAction">
+			<result name="success">sampleDisplayEventRecords.jsp</result>
+		</action>
+		
+		<!-- MISCELLANEOUS ACTIONS -->
+		<action name="radioButtonAction" class="ustsocc.action.RadioButtonAction"
+			method="display">
+			<result name="none">/sampleEventEvaluation.jsp</result>
+		</action>
+		
+		<action name="returnHome" class="ustsocc.action.ReturnHomeAction" 
+			method="display">
+			<result name="none">/index.jsp</result>
+		</action>
 	</package>
 </struts>

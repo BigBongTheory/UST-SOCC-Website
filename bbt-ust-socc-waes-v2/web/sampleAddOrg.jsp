@@ -25,5 +25,8 @@
 		<s:submit value="Add Organization" />
 		<s:reset />
 	</s:form>
+	<s:form action="returnHome" method="post">
+		<s:submit value="Go bacc"/>
+	</s:form>
 </body>
 </html>

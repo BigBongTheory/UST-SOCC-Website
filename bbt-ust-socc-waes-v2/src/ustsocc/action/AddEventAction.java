@@ -19,7 +19,7 @@ public class AddEventAction extends ActionSupport implements ModelDriven<Event>{
 	
 	public String execute() {
 		
-		////////////////////////////
+		////////////////////////////	
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
 		Session session = sessionFactory.openSession();

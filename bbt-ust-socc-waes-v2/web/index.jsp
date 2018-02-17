@@ -14,6 +14,12 @@
 	<s:form action="radioButtonAction" method="post">
 		<s:submit value="Evaluate Event"/>
 	</s:form>
+	<s:form action="goToAddOrganization" method="post">
+		<s:submit value="Go to Add Organization Page"/>
+	</s:form>
+	<s:form action="goToAddEvent" method="post">
+		<s:submit value="Go to Add Event Page"/>
+	</s:form>
 	<s:form action="displayEvaluationRecords" method="post">
 		<s:submit value="Display Evaluation Records"/>	
 	</s:form>
@@ -23,5 +29,12 @@
 	<s:form action="displayEventRecords" method="post">
 		<s:submit value="Display Event Records"/>	
 	</s:form>
+	<s:form action="displayOrganizationRecordsUser" method="post">
+		<s:submit value="Display Organization Records (User)"/>	
+	</s:form>
+	<s:form action="displayEventRecordsUser" method="post">
+		<s:submit value="Display Event Records (User)"/>	
+	</s:form>
+	
 </body>
 </html>

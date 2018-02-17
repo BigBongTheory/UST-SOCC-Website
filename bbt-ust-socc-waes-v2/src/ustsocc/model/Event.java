@@ -3,7 +3,6 @@ package ustsocc.model;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
-//import java.text.SimpleDateFormat;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -47,6 +46,9 @@ public class Event {
 	
 	public void setId(int id) {
 		this.id = id;
+	}
+	public int getId() {
+		return id;
 	}
 	public String getEventCode() {
 		return eventCode;
