@@ -23,5 +23,8 @@
 		<s:submit value="Add Event"/>
 		<s:reset/>
 	</s:form>
+	<s:form action="returnHome" method="post">
+		<s:submit value="Go bacc"/>
+	</s:form>
 </body>
 </html>
