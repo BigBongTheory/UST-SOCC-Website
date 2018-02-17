@@ -1,0 +1,113 @@
+body {
+	font-family: Roboto;
+}
+
+div {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.container {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#socc-logo {
+	height: 200%;
+	margin-top: -10px;
+}
+
+.navbar-brand {
+	font-size: 10pt;
+}
+
+a {
+	font-size: 10pt;
+}
+
+.navbar-right {
+	margin-right: 1%;
+}
+
+.jumbotron {
+	margin-top: -20px;
+	background-color: #8a2a2a;
+	color: #ffffff
+}
+
+#about {
+	margin: auto;
+	max-width: 80%;
+	max-height: 80%;
+}
+
+.row {
+	text-align: center;
+}
+
+.header {
+	color: #8a2a2a;
+	font-family: Roboto Slab;
+	font-size: 15pt;
+	text-align: left;
+	padding-bottom: 5px;
+}
+
+.row-sm {
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+	width: 80%;
+}
+
+.paragraph {
+	text-align: justify;
+	font-size: 10pt;
+	padding-bottom: 28px;
+	float: center;
+}
+
+.header2 {
+	color: #8a2a2a;
+	font-family: Roboto Slab;
+	font-size: 15pt;
+	text-align: center !important;
+	padding-bottom: 25px;
+}
+
+.eb-name {
+	margin-top: -80px;
+}
+
+.eb-position {
+	margin-top: 0px;
+}
+
+.name {
+	text-align: justify;
+	font-size: 10pt;
+	padding-bottom: 35px;
+}
+
+.eb-gallery {
+	max-width: 70%;
+}
+
+.eb {
+	max-width: 80%;
+	max-height: 80%;
+	float: center;
+}
+
+.col-sm {
+	text-align: center;
+}
+
+.img-container {
+	float: center;
+}
+
+hr {
+	max-width: 80%;
+	float: center;
+}
