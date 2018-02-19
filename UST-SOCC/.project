@@ -3,6 +3,7 @@
 	<name>UST-SOCC</name>
 	<comment></comment>
 	<projects>
+		<project>UST-SOCC-Website</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
