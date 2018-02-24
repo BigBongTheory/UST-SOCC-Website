@@ -39,10 +39,12 @@ public class Event {
 	@Column (name="eventDate", nullable=false)
 	private Date eventDate;
 	
-	@Column (name="eventTime", nullable=false)
-	private String eventTime;
+	@Column (name="eventStartTime", length=8, nullable=false)
+	private String eventStartTime;
 	
-//	private SimpleDateFormat ft = new SimpleDateFormat("E MM.dd.yyyy");
+	@Column (name="eventEndTime", length=8, nullable=false)
+	private String eventEndTime;
+	
 	
 	public void setId(int id) {
 		this.id = id;
@@ -86,12 +88,16 @@ public class Event {
 	public void setEventDate(Date eventDate) {
 		this.eventDate = eventDate;
 	}
-	public String getEventTime() {
-		return eventTime;
+	public String getEventStartTime() {
+		return eventStartTime;
 	}
-	public void setEventTime(String eventTime) {
-		this.eventTime = eventTime;
+	public void setEventStartTime(String eventStartTime) {
+		this.eventStartTime = eventStartTime;
 	}
-	
-	
+	public String getEventEndTime() {
+		return eventEndTime;
+	}
+	public void setEventEndTime(String eventEndTime) {
+		this.eventEndTime = eventEndTime;
+	}
 }

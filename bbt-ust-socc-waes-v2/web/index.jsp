@@ -1,40 +1,101 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    
-<%@ taglib uri="/struts-tags" prefix="s" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+	pageEncoding="ISO-8859-1"%>
+<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="styles/style.css" />
+
+<title>UST Student Organizations Coordinating Council</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+	
+}
+.round {
+	border-radius: 50%;
+}
+
+.org-image {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.org-container {
+	border: 20px;
+}
+
+.org-container:hover .org-image {
+	opacity: 0.3;
+}
+
+.org-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%)
+}
+
+.text {
+	background-color: #8a2a2a;
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+}
+
+</style>
 </head>
 <body>
-	<h1>INDEX</h1>
-	<s:form action="radioButtonAction" method="post">
-		<s:submit value="Evaluate Event"/>
-	</s:form>
-	<s:form action="goToAddOrganization" method="post">
-		<s:submit value="Go to Add Organization Page"/>
-	</s:form>
-	<s:form action="goToAddEvent" method="post">
-		<s:submit value="Go to Add Event Page"/>
-	</s:form>
-	<s:form action="displayEvaluationRecords" method="post">
-		<s:submit value="Display Evaluation Records"/>	
-	</s:form>
-	<s:form action="displayOrganizationRecords" method="post">
-		<s:submit value="Display Organization Records"/>	
-	</s:form>
-	<s:form action="displayEventRecords" method="post">
-		<s:submit value="Display Event Records"/>	
-	</s:form>
-	<s:form action="displayOrganizationRecordsUser" method="post">
-		<s:submit value="Display Organization Records (User)"/>	
-	</s:form>
-	<s:form action="displayEventRecordsUser" method="post">
-		<s:submit value="Display Event Records (User)"/>	
-	</s:form>
-	
+	<div class="container-fluid">
+
+		<div class="container" id="orgs">
+			<div class="modal-body row">
+				<div class="col org-container">
+					<img src="img/UST-CSS.jpg" class="round org-image">
+					<div class="overlay">
+						<div class="text">UST-Computer Science Society</div>
+					</div>
+				</div>
+				<div class="col org-container">
+					<img src="img/UST-CSS.jpg" class="round org-image">
+					<div class="overlay">
+						<div class="text">UST-Computer Science Society</div>
+					</div>
+				</div>
+				<div class="col org-container">
+					<img src="img/UST-CSS.jpg" class="round org-image">
+					<div class="overlay">
+						<div class="text">UST-Computer Science Society</div>
+					</div>
+				</div>
+				<div class="col org-container">
+					<img src="img/UST-CSS.jpg" class="round org-image">
+					<div class="overlay">
+						<div class="text">UST-Computer Science Society</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

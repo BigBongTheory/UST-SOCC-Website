@@ -4,39 +4,60 @@
     "http://struts.apache.org/dtds/struts-2.1.7.dtd">
 
 <struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.custom.i18n.resources" value="global" />
 	<package name="default" extends="struts-default">
-	
+
 		<!-- ACTIONS FOR ADDING ORGANIZATIONS -->
 		<action name="goToAddOrganization" class="ustsocc.action.GoToAddOrganizationAction">
-			<result name="success">/sampleAddOrg.jsp</result>
+			<result name="success">/add-organization.jsp</result>
 		</action>
 		
 		<action name="addOrg" class="ustsocc.action.AddOrganizationAction">
-			<result name="success">/index.jsp</result>
+			<!-- <interceptor-ref name="exception"/>
+            	<interceptor-ref name="i18n"/>
+            	<interceptor-ref name="orgImage">
+       			<param name="allowedTypes">text/plain</param>
+       			<param name="maximumSize">1572864</param>
+  	    	</interceptor-ref>
+  	    	
+            <interceptor-ref name="params">
+                <param name="excludeParams">dojo\..*,^struts\..*</param>
+            </interceptor-ref>
+            
+            <interceptor-ref name="validation">
+                <param name="excludeMethods">input,back,cancel,browse</param>
+            </interceptor-ref>
+            
+            <interceptor-ref name="workflow">
+                <param name="excludeMethods">input,back,cancel,browse</param>
+            </interceptor-ref>
+             -->
+			<result name="success">/admin.jsp</result>
 			<result name="error">/errorPage.jsp</result>
-			<result name="input">/sampleAddOrg.jsp</result>
+			<result name="input">/add-organization.jsp</result>
 		</action>
 
 		<!-- ACTIONS FOR ADDING EVENTS -->
 		<action name="goToAddEvent" class="ustsocc.action.GoToAddEventAction">
-			<result name="success">/sampleAddEvent.jsp</result>
+			<result name="success">/add-event.jsp</result>
 		</action>
 		
 		<action name="addEvent" class="ustsocc.action.AddEventAction">
-			<result name="success">/index.jsp</result>
+			<result name="success">/admin.jsp</result>
 			<result name="error">/errorPage.jsp</result>
-			<result name="input">/sampleAddEvent.jsp</result>
+			<result name="input">/add-event.jsp</result>
 		</action>
 
 		<!-- ACTIONS FOR SUBMITTING AN EVALUATION -->
 		<action name="addEvaluation" class="ustsocc.action.AddEvaluationAction">
-			<result name="success">/index.jsp</result>
+			<result name="success">/index2.jsp</result>
 			<result name="error">/errorPage.jsp</result>
 			<result name="input">/sampleAddEvaluation.jsp</result>
 		</action>
 
 		<action name="addEvaluationAccls" class="ustsocc.action.EvaluationAcclsAction">
-			<result name="success">/index.jsp</result>
+			<result name="success">/index2.jsp</result>
 			<result name="error">/errorPage.jsp</result>
 			<result name="input">/sampleEventEvaluation.jsp</result>
 		</action>
@@ -44,15 +65,15 @@
 		<!-- ADMIN ACTIONS FOR DISPLAYING RECORDS -->
 		<action name="displayEvaluationRecords" class="ustsocc.action.DisplayEvaluationRecordsAction"
 			method="display">
-			<result name="none">/sampleDisplayEvaluationRecords.jsp</result>
+			<result name="none">/view-eval.jsp</result>
 		</action>
 		
 		<action name="displayOrganizationRecords" class="ustsocc.action.DisplayOrganizationRecordsAction">
-			<result name="success">sampleDisplayOrganizationRecords.jsp</result>
+			<result name="success">view-organizations.jsp</result>
 		</action>
 		
 		<action name="displayEventRecords" class="ustsocc.action.DisplayEventRecordsAction">
-			<result name="success">sampleDisplayEventRecords.jsp</result>
+			<result name="success">view-events.jsp</result>
 		</action>
 		
 		<!-- USER ACTIONS FOR DISPLAYING RECORDS -->
@@ -68,7 +89,11 @@
 		
 		<!-- ACTIONS FOR DELETING -->
 		<action name="deleteEvent" class="ustsocc.action.DeleteEventAction">
-			<result name="success">sampleDisplayEventRecords.jsp</result>
+			<result name="success">view-events.jsp</result>
+		</action>
+		
+		<action name="deleteOrg" class="ustsocc.action.DeleteOrganizationAction">
+			<result name="success">view-organizations.jsp</result>
 		</action>
 		
 		<!-- MISCELLANEOUS ACTIONS -->
@@ -79,7 +104,13 @@
 		
 		<action name="returnHome" class="ustsocc.action.ReturnHomeAction" 
 			method="display">
-			<result name="none">/index.jsp</result>
+			<result name="none">/admin.jsp</result>
 		</action>
+		
+		<!-- 
+		<action name="dateTimePickerAction" class="ustsocc.action.DateTimePickerAction" 
+			method="display">
+			<result name="none">/admin.jsp</result>
+		</action> -->
 	</package>
 </struts>

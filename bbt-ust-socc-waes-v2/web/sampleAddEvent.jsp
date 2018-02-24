@@ -18,7 +18,8 @@
 		<s:textfield label="Enter Event Nature" key="eventNature"/>
 		<s:textfield label="Enter Event Organization" key="eventOrganization"/>
 		<s:textfield label="Enter Event Date" key="EventDate"/> 	
-		<s:textfield label="Enter Event Time" key="eventTime"/>
+		<s:textfield label="Enter Event Start Time" key="eventStartTime"/>
+		<s:textfield label="Enter Event End Time" key="eventEndTime"/>
 		<s:fielderror name="error"></s:fielderror>
 		<s:submit value="Add Event"/>
 		<s:reset/>
