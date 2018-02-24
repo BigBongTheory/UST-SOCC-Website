@@ -129,23 +129,30 @@
 <body>
 	<div class="bg">
 		<div class="navbar">
-  			<a href="/UST-SOCC-Website-JDV/index.jsp">Home</a>
-  			<a href="/UST-SOCC-Website-JDV/about-socc.jsp">About SOCC</a>
+  			<a href="index.jsp">Home</a>
+  			<a href="about-socc.jsp">About SOCC</a>
   			<div class="dropdown">
     			<button class="dropbtn">Organizations</button>
     			<div class="dropdown-content">
-			     	<a href="/UST-SOCC-Website-JDV/univ-wide.jsp">University-Wide</a>
-			     	<a href="/UST-SOCC-Website-JDV/college-based.jsp">College-Based</a>
+			     	<a href="univ-wide.jsp">University-Wide</a>
+			     	<a href="college-based.jsp">College-Based</a>
    	 			</div>
   			</div> 
-  			<a href="/UST-SOCC-Website-JDV/evaluate.jsp">Evaluate</a>
-  			<a href="/UST-SOCC-Website-JDV/calendar.jsp">Calendar</a>
+  			<a href="evaluate.jsp">Evaluate</a>
+  			<a href="calendar.jsp">Calendar</a>
 		</div>
 		<div class="main container-fluid">Evaluate</div>
 	</div>
 			
 	<div class="container">
 		<div class="paragraph">Greetings from <div class="red">Bouncy!</div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a scelerisque nisi. Donec posuere nisl felis, et blandit tortor euismod varius. Sed scelerisque bibendum enim, in venenatis leo condimentum sed. Maecenas id enim lectus. Phasellus porta tellus nec eros ornare blandit. Sed sed pretium velit. Nullam ut purus non velit dignissim tincidunt. Donec ac placerat mi, vitae finibus erat. Nullam ultrices mi non gravida vehicula. Duis sed fermentum leo. Vestibulum nec placerat purus.</div>
+	</div>
+	<div style="text-align: center;">
+		<p class="header">Event Code:</p>
+	  	<input type="text"  name="name" style="max-width: 100%; width: 300px;">
+	  	<br><br>
+	  	<input type="submit">
+	  					
 	</div>
 </body>
 </html>

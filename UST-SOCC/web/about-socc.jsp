@@ -109,17 +109,17 @@
 <body>
 	<div class="bg">
 		<div class="navbar">
-  			<a href="/index.jsp">Home</a>
-  			<a href="/about-socc.jsp">About SOCC</a>
+  			<a href="index.jsp">Home</a>
+  			<a href="about-socc.jsp">About SOCC</a>
   			<div class="dropdown">
     			<button class="dropbtn">Organizations</button>
     			<div class="dropdown-content">
-			     	<a href="/univ-wide.jsp">University-Wide</a>
-			     	<a href="/college-based.jsp">College-Based</a>
+			     	<a href="univ-wide.jsp">University-Wide</a>
+			     	<a href="college-based.jsp">College-Based</a>
    	 			</div>
   			</div> 
-  			<a href="/evaluate.jsp">Evaluate</a>
-  			<a href="/calendar.jsp">Calendar</a>
+  			<a href="evaluate.jsp">Evaluate</a>
+  			<a href="calendar.jsp">Calendar</a>
 		</div>
 		<div class="main container-fluid">About SOCC</div>
 	</div>
